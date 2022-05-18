@@ -48,16 +48,32 @@ const arr = [1, 2, 3];
 // }
 
 // We can use a for...of loop to iterate over iterables, like arrays and strings.
-for (let el of arr) {
-  console.log(el)
-}
+// for (let el of arr) {
+//   console.log(el)
+// }
 
 // We can use a very similar loop to achieve similar results:
 // We iterate over PROPERTIES in ARBITRARY order
-for (let el in arr){
-  console.log(el)
-}
+// for (let el in arr){
+//   console.log(el)
+// }
 
-for (let el in arr){
-  console.log(arr[el])
-}
+// for (let el in arr){
+//   console.log(arr[el])
+// }
+
+// const dog = {
+//   name: "Hershey",
+//   age: 1,
+//   activities: ["fetch", "naps", "being a good boy"]
+// }
+
+// for (let property in dog){
+//   console.log(property)
+// }
+
+// for (let property in dog){
+//   console.log(dog[property])
+// }
+
+
