@@ -9,8 +9,24 @@
 // }
 
 // We can do the same thing with a different format:
-let i = 0;
-while (i < 10){
-  console.log(i);
-  i++
-}
+// let i = 0;
+// while (i < 10){
+//   console.log(i);
+//   i++
+// }
+
+// So far we've repeated a task using a counter. Another very common use case: iterate using an index.
+
+const arr = [1, 2, 3];
+// let i = 0;
+
+// while (i < arr.length){
+//   console.log(i);
+//   i++;
+// }
+
+// This will log i, our index, itself. To access the element at that index:
+// while (i < arr.length){
+//   console.log(arr[i]);
+//   i++;
+// }
