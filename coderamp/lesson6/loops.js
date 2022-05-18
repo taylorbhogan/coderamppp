@@ -30,3 +30,19 @@ const arr = [1, 2, 3];
 //   console.log(arr[i]);
 //   i++;
 // }
+
+
+// We can do the same exact thing with a different format:
+// for (let i = 0; i < arr.length; i++){
+//   console.log(arr[i])
+// }
+
+// How would we go about printing these numbers backwards?
+// Will this work?
+// for (let i = 0; i < arr.length; i--){
+//   console.log(arr[i])
+// }
+
+// for (let i = arr.length; i >= 0; i--){
+//   console.log(arr[i])
+// }
