@@ -36,7 +36,6 @@ const arr = [1, 2, 3];
 // for (let i = 0; i < arr.length; i++){
 //   console.log(arr[i])
 // }
-
 // How would we go about printing these numbers backwards?
 // Will this work?
 // for (let i = 0; i < arr.length; i--){
@@ -76,4 +75,27 @@ const arr = [1, 2, 3];
 //   console.log(dog[property])
 // }
 
+// We've constructed our own loops by hand, but we can achieve loops by other means as well.
+// Last week we discussed some of the array prototype methods, the built-in functions that we have access to when working with arrays.
+// One is called forEach: it executes a given function once for each array element
 
+// arr.forEach(el => {
+//   console.log(el)
+// })
+
+
+// What is going on here?
+// arr.forEach(el => {
+//   el++
+//   console.log(el)
+// })
+
+// console.log(arr)
+
+
+// Why is that different from this?
+// for (let i = 0; i < arr.length; i++){
+//   arr[i]++
+//   console.log(arr[i])
+// }
+// console.log(arr);
