@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+body{
+  display: flex;
+}
+
+main {
+  width: 100%
+}
+
+#spotify-logo {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+#playlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+.playlist {
+  list-style-type: none;
+}
