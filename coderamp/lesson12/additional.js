@@ -89,7 +89,24 @@ const everyOtherCapitalizor = str => {
 // to the function.
 // e.g., For n=4, 'Hello World' --> 'HelLo WOrld'
 
+const nthCapitalizor = (str, n) => {
+  const res = [];
 
+  for (let i = 0; i < str.length; i++){
+    const char = str[i];
+
+    if (i % n === 0){
+      if (char === char.toLowerCase()){
+        res.push(char.toUpperCase())
+      } else {
+        res.push(char.toLowerCase())
+      }
+    } else {
+      res.push(char)
+    }
+  }
+  return res.join("")
+}
 
 
 
