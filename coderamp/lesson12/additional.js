@@ -3,6 +3,10 @@
 // (Hint: Look up the trim method!)
 let str = " heeeBEEEEeeejeeEeebeee s !!!   ";
 
+const removeWhiteSpace = str => {
+  return str.trim();
+}
+
 
 
 // 2. Build on your prior function to also convert all
