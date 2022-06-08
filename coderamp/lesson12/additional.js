@@ -24,6 +24,10 @@ const toLowerCase = str => {
 // 3. Keep building on the same function so that you also
 // split the string on spaces to get an array back.
 
+const splitOnSpace = str => {
+  return str.split(" ")
+}
+
 
 
 
