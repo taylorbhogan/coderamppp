@@ -1,139 +1,22 @@
-// 1. Given the string below write a function that removes
-// the surrounding white space
-// (Hint: Look up the trim method!)
-let str = " heeeBEEEEeeejeeEeebeee s !!!   ";
+/* Remove vowels from a string
 
-const removeWhiteSpace = str => {
-  return str.trim();
-}
+* Write a function that when given a string, returns a new string with all vowels removed.
+* Preserve given capitalization.
 
+e.g.
+"Hello, world" => "Hll, wrld"
+"BANANAS OF THE WORLD, UNITE!" => "BNNS F TH WRLD, NT!"
+"This Function is Powered by A Great Language Called JavaScript" => "Ths Fnctn s Pwrd b  Grt Lngg Clld JvScrpt"
 
+*/
 
-// 2. Build on your prior function to also convert all
-// characters to lower case.
-
-const toLowerCase = str => {
+function vowelRemover (str) {
+  const dict = {a: 1, e: 1, i: 1, o: 1, u: 1, y: 1, A: 1, E: 1, I: 1, O: 1, U: 1, Y: 1}
   const res = []
   for (let i = 0; i < str.length; i++){
-    res.push(str[i].toLowerCase())
-  }
-  return res.join("")
-}
-
-
-// 3. Keep building on the same function so that you also
-// split the string on spaces to get an array back.
-
-const splitOnSpace = str => {
-  return str.split(" ")
-}
-
-
-
-
-// 4. For each item in the array, convert the element to
-// Sentence Case (first letter capitalized and all
-// subsequent letters lower case)
-
-const sentenceCase = arr => {
-  const res = []
-  for (let i = 0; i < arr.length; i++){
-    const item = arr[i]
-    res.push(item[0].toUpperCase() + item.slice(1))
-  }
-  return res;
-}
-
-
-
-
-// 5. Join the newly-cased sentence into a single string (with
-// no spaces). This new string will be what we call UpperCamelCase.
-
-const upperCamelCaseMaker = arr => {
-  return arr.join("")
-}
-
-
-
-
-// 6. Medium: Write a function that takes in a string and replaces
-// every other character in the string with the opposite case
-// (i.e., if there’s an upper case character, replace with
-// lower case & vice versa)
-
-const everyOtherCapitalizor = str => {
-  const res = [];
-
-  for (let i = 0; i < str.length; i++){
-    const char = str[i]
-
-    if (i % 2 === 0) {
-      if (char === char.toLowerCase()){
-        res.push(char.toUpperCase())
-      } else {
-        res.push(char.toLowerCase())
-      }
-    } else {
-      res.push(char)
+    if (str[i] in dict === false){
+      res.push(str[i])
     }
   }
   return res.join("")
 }
-
-
-
-
-// 7. Hard: Rewrite the function above but have it replace every
-// nth character with its opposite case, where n is a parameter
-// to the function.
-// e.g., For n=4, 'Hello World' --> 'HelLo WOrld'
-
-const nthCapitalizor = (str, n) => {
-  const res = [];
-
-  for (let i = 0; i < str.length; i++){
-    const char = str[i];
-
-    if (i % n === 0){
-      if (char === char.toLowerCase()){
-        res.push(char.toUpperCase())
-      } else {
-        res.push(char.toLowerCase())
-      }
-    } else {
-      res.push(char)
-    }
-  }
-  return res.join("")
-}
-
-
-
-const run = string => {
-  console.log("Running run...")
-  console.log("Original:",str)
-
-  const trimmed = removeWhiteSpace(string)
-  console.log("Trimmed:",trimmed);
-
-  const lowered = toLowerCase(trimmed)
-  console.log("Lowered:",lowered)
-
-  const split = splitOnSpace(lowered);
-  console.log("Split:",split)
-
-  const sentence = sentenceCase(split)
-  console.log("Sentence:",sentence)
-
-  const UpperCamelCase = upperCamelCaseMaker(sentence)
-  console.log("UpperCamelCase:",UpperCamelCase)
-
-  const everyOther = everyOtherCapitalizor(UpperCamelCase)
-  console.log("everyOther:",everyOther)
-
-  const nthCapitalized = nthCapitalizor(lowered, 3)
-  console.log("nthCapitalized:",nthCapitalized)
-}
-
-run(str)
