@@ -62,6 +62,24 @@ const upperCamelCaseMaker = arr => {
 // (i.e., if there’s an upper case character, replace with
 // lower case & vice versa)
 
+const everyOtherCapitalizor = str => {
+  const res = [];
+
+  for (let i = 0; i < str.length; i++){
+    const char = str[i]
+
+    if (i % 2 === 0) {
+      if (char === char.toLowerCase()){
+        res.push(char.toUpperCase())
+      } else {
+        res.push(char.toLowerCase())
+      }
+    } else {
+      res.push(char)
+    }
+  }
+  return res.join("")
+}
 
 
 
