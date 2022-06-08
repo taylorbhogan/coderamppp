@@ -20,3 +20,32 @@ function vowelRemover (str) {
   }
   return res.join("")
 }
+
+
+/* How long is the longest sentence?
+
+* Write a function that when given an array of sentences, returns the number of words found in the longest sentence.
+
+e.g.
+const sentences = [
+  "Hello, world",
+  "BANANAS OF THE WORLD, UNITE!",
+  "This Function is Powered by A Great Language Called JavaScript"
+] => 10
+
+*/
+
+function longestSentenceFinder (arr) {
+  let max = -Infinity;
+
+  for (let i = 0; i < arr.length; i++){
+    const sentence = arr[i]
+
+    if (sentence.split(" ").length > max){
+      max = sentence.split(" ").length
+    }
+  }
+  return max;
+}
+
+console.log(longestSentenceFinder(sentences))
