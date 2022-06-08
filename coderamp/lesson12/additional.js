@@ -124,3 +124,37 @@ function longestSentenceFinder(arr) {
   }
   return max;
 }
+
+/*  Email domains
+
+* Write a function that when given an array of email addresses, returns a new array of unique domain names.
+
+e.g.
+[
+  "taylorb.hogan@gmail.com",
+  "kalamazoo@yahoo.org"
+] => [
+  "gmail",
+  "yahoo"
+]
+ */
+
+
+const domainFinder = arr => {
+  const res = [];
+  const visited = {};
+
+  arr.forEach(email => {
+    const backSlice = email.slice(email.indexOf("@") + 1)
+    const domain = backSlice.slice(0, backSlice.indexOf("."))
+
+
+    if (domain in visited === false){
+      res.push(domain)
+      visited[domain] = true;
+    }
+  })
+  return res;
+}
+
+console.log(domainFinder(emails))
