@@ -35,6 +35,14 @@ const splitOnSpace = str => {
 // Sentence Case (first letter capitalized and all
 // subsequent letters lower case)
 
+const sentenceCase = arr => {
+  const res = []
+  for (let i = 0; i < arr.length; i++){
+    const item = arr[i]
+    res.push(item[0].toUpperCase() + item.slice(1))
+  }
+  return res;
+}
 
 
 
