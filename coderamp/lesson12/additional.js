@@ -112,7 +112,28 @@ const nthCapitalizor = (str, n) => {
 
 const run = string => {
   console.log("Running run...")
+  console.log("Original:",str)
 
+  const trimmed = removeWhiteSpace(string)
+  console.log("Trimmed:",trimmed);
+
+  const lowered = toLowerCase(trimmed)
+  console.log("Lowered:",lowered)
+
+  const split = splitOnSpace(lowered);
+  console.log("Split:",split)
+
+  const sentence = sentenceCase(split)
+  console.log("Sentence:",sentence)
+
+  const UpperCamelCase = upperCamelCaseMaker(sentence)
+  console.log("UpperCamelCase:",UpperCamelCase)
+
+  const everyOther = everyOtherCapitalizor(UpperCamelCase)
+  console.log("everyOther:",everyOther)
+
+  const nthCapitalized = nthCapitalizor(lowered, 3)
+  console.log("nthCapitalized:",nthCapitalized)
 }
 
 run(str)
