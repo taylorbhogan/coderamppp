@@ -12,6 +12,13 @@ const removeWhiteSpace = str => {
 // 2. Build on your prior function to also convert all
 // characters to lower case.
 
+const toLowerCase = str => {
+  const res = []
+  for (let i = 0; i < str.length; i++){
+    res.push(str[i].toLowerCase())
+  }
+  return res.join("")
+}
 
 
 // 3. Keep building on the same function so that you also
