@@ -50,6 +50,9 @@ const sentenceCase = arr => {
 // 5. Join the newly-cased sentence into a single string (with
 // no spaces). This new string will be what we call UpperCamelCase.
 
+const upperCamelCaseMaker = arr => {
+  return arr.join("")
+}
 
 
 
