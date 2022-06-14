@@ -157,4 +157,68 @@ const domainFinder = arr => {
   return res;
 }
 
-console.log(domainFinder(emails))
+// console.log(domainFinder(emails))
+
+/* Valid Anagram
+
+* Write a function that, given two strings s and t, returns true if t is an anagram of s, and false otherwise.
+* An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+e.g.
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Input: s = "rat", t = "car"
+Output: false
+ */
+
+const isAnagram = function(s, t) {
+  if (s.length !== t.length) return false;
+
+  const dict = {}
+
+  for (let i = 0; i < s.length; i++){
+    const char = s[i]
+
+    if (dict[char] === undefined){
+      dict[char] = 1
+    } else {
+      dict[char]++
+    }
+  }
+
+  for (let i = 0; i < t.length; i++){
+    const char = t[i]
+
+    if (dict[char] === undefined){
+      return false;
+    } else if (dict[char] === 1){
+      delete dict[char]
+    } else {
+      dict[char]--
+    }
+  }
+
+  return Object.keys(dict).length === 0;
+};
+
+
+/* Valid Palindrome
+
+* Write a function that, given a string s, returns true if s is a palindrome, and false otherwise.
+* A palindrome is a word or phrase that reads the same forwards and backwards, typically ignoring all punctuation.
+
+e.g.
+Input: s = "panama"
+Output: false
+
+Input: s = "racecar"
+Output: true
+ */
+
+const isPalindrome = s => {
+  const sReverse = s.split("").reverse().join("")
+
+  return s === sReverse;
+}
+
