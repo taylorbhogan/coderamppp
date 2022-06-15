@@ -17,7 +17,7 @@ let ages = {
 };
 
 
-// 1. Build an object representing a class, which stores the following:
+// 1. Build an object representing a course, which stores the following:
 // - teacher: Christine Umans
 // - subject: JavaScript 101
 // - students: alice, charlie, david
@@ -27,15 +27,13 @@ let ages = {
 
 
 
-// 2. Add a student "bob"
+// 2. Add a student "bob" to that course.
 
 
 
 
-// 3. Create an array called courses that contains the course
-// above and two new ones (you'll have to make the new courses, then
-// create a courses variable that is an array with all the courses made so far)
-
+// 3. Create two new courses that mirror the format above.
+// Then create an array called courses that contains the three courses.
 
 
 
@@ -59,7 +57,13 @@ let teachers = [];
 
 
 
-// 6. Write a function, called getStudentSubjects given two parameters:
+// 6. Write a function, called getStudentSubjects.
+// Hardest: can you write the function after reading only the prompt?
+// Harder: can you write the function after reading only the prompt and hint?
+// Hard: can you write the function after reading the prompt, hint, and steps?
+
+// PROMPT:
+//    Given two parameters:
 //      - array of courses
 //      - name of student
 //    Return the list of subjects that the student is taking
@@ -67,20 +71,28 @@ let teachers = [];
 // For example:
 //   getStudentSubjects(courses, "david") -> ["JavaScript 101", "Python 101"]
 
-// HINT: this problem can be split up in two parts
-//     - building the list of subjects the student is taking
-//     - finding out if a student is taking a class
-// Try calling the isStudentInCourse(course, student) helper function defined below!
-// fill out the isStudentInCourse function afterwards, but call it here
 
-// Steps:
+// HINT:
+// This problem can be split up in two parts:
+//     Part 1: finding out if a student is taking a class
+//     Part 2: building the list of subjects the student is taking
+// You could do all of this work in one function, but try using a helper function!
+// The isStudentInCourse(course, student) helper function is declared below.
+// You can write out the logic of Part 1 above into the isStudentInCourse function,
+// and then use the return value of that helper function to power Part 2,
+// which you'll write in the body of your main function, getStudentSubjects.
+
+
+// STEPS:
 // Define the getStudentSubjects function that takes two parameters (courses objects array and student name string)
-// create an array that will eventually hold all of the student's subjects
-// iterate over the courses
-// for each course, check if the student is taking the course
-// HINT: call the isStudentInCourse - it's ok if you haven't written the code for  yet!
-// if the student is in the course, add the student to the subjects array
-// return the subjects array
+// Create an array that will eventually hold all of the student's subjects
+// Iterate over the courses
+// For each course, check if the student is taking the course
+// HINT: call the isStudentInCourse - it's ok if you haven't written the code for yet!
+//    Even without the logic written yet, you know
+//    you will write isStudentInCourse to return either true or false.
+// If the student is in the course, add the student to the subjects array
+// Return the subjects array
 
 
 
@@ -96,8 +108,6 @@ function isStudentInCourse(course, student) {
 	// iterate over the students, and check if any of them equal the student
   // if we find one that equals the student, return true
   // if we don't find one, return false
-
-
 
 
 }
