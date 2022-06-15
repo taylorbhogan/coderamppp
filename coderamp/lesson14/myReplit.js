@@ -1,7 +1,7 @@
 // What is an object?
-// kind of like a list to hold variables "in a function"
-// used to hold data, different data types
-// objects have keys (or properties) and values
+// - Kind of like a list to hold variables "in a function"
+// - Used to hold data, especially of different data types
+// - Have keys (or "properties") and values (the data)
 
 let car = {
   "make": "nissan",
@@ -10,10 +10,28 @@ let car = {
   "miles": 130000,
 };
 
+// make and model are keys
+// "nissan" and "pathfinder" are values
+
+// the value of the property color in car is the string "red"
+
+
+let park = {};
+park.name = "Yellowstone";
+park.establishedYear = 1872;
+park["acres"] = 2221776;
+park["state"] = "Wyoming"
+
+// syntax note on "Property accessors":
+// the first 2 park lines use "dot notation"; the last 2 use "bracket notation".
+// both are valid, though dot notation is more common and considered more readable.
+// if you're using weird property names, bracket notation may be required.
+// MDN for more info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors
+
 let ages = {
-  "alice": 24,
-  "robert": 23,
-  "claire": 28,
+  alice: 24,
+  robert: 23,
+  claire: 28,
 };
 
 
