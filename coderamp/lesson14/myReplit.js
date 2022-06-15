@@ -16,29 +16,19 @@ let ages = {
   "claire": 28,
 };
 
+
 // 1. Build an object representing a class, which stores the following:
 // - teacher: Christine Umans
 // - subject: JavaScript 101
 // - students: alice, charlie, david
 // - assignments: `quiz1, quiz2, midterm, final
 
-const course1 = {
-  teacher: "Christine Umans",
-  subject: "JavaScript 101",
-  students: ["alice", "charlie", "david"],
-  assignments: ["quiz1", "quiz2", "midterm", "final"]
-}
 
 
 
 
 // 2. Add a student "bob"
 
-// console.log("before bob",course1)
-
-course1.students.push("bob")
-
-// console.log("after bob",course1)
 
 
 
@@ -46,16 +36,8 @@ course1.students.push("bob")
 // above and two new ones (you'll have to make the new courses, then
 // create a courses variable that is an array with all the courses made so far)
 
-const course2 = {...course1}
-course2.subject = "Python 101"
 
-const course3 = {...course1}
-course3.subject = "CSS 101"
-course3.students = ["john", "joe", "jim"]
 
-const courses = [course1, course2, course3]
-
-// console.log(courses);
 
 // 4. Print a list of all teachers
 let teachers = [];
@@ -64,10 +46,8 @@ let teachers = [];
 // log the courses array
 
 
-for (let i = 0; i < courses.length; i++){
-  teachers.push(courses[i].teacher)
-}
-// console.log("teachers",teachers);
+
+
 
 // 5. Print a list of all subjects
 // make an empty array that will eventually contain all the subjects
@@ -75,13 +55,7 @@ for (let i = 0; i < courses.length; i++){
 // for each course add the course's subject to the subjects array
 // print the subjects array at the end
 
-const subjects = [];
 
-for (let i = 0; i < courses.length; i++){
-  subjects.push(courses[i].subject)
-}
-
-// console.log("subjects",subjects);
 
 
 
@@ -108,17 +82,6 @@ for (let i = 0; i < courses.length; i++){
 // if the student is in the course, add the student to the subjects array
 // return the subjects array
 
-const getStudentSubjects = (courses, student) => {
-  const studentSubjects = [];
-
-  for (let i = 0; i < courses.length; i++){
-    const course = courses[i]
-    if (isStudentInCourse(course, student)){
-      studentSubjects.push(course.subject)
-    }
-  }
-  return studentSubjects;
-}
 
 
 
@@ -130,16 +93,14 @@ const getStudentSubjects = (courses, student) => {
 // course.students -> ["alice", "david", "charlie"]
 // student -> "charlie"
 function isStudentInCourse(course, student) {
-  // iterate over the students, and check if any of them equal the student
+	// iterate over the students, and check if any of them equal the student
   // if we find one that equals the student, return true
   // if we don't find one, return false
-  for (let i = 0; i < course.students.length; i++){
-    if (course.students[i] === student) return true;
-  }
-  return false;
+
+
+
+
 }
 
 // 8. Call getStudentSubjects and print the result.
 // pass in the array of courses and the name of a student
-
-console.log(getStudentSubjects(courses, "david"));
